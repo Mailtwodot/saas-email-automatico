@@ -23,7 +23,7 @@ export const authOptions = {
       }
       return token;
     },
-    async session({ session, token }) {
+    async session({ session, token }: { session: any, token: any }) {
       // Garante que session.user existe e recebe o accessToken
       (session.user as any).accessToken = token.accessToken as string;
       return session;
