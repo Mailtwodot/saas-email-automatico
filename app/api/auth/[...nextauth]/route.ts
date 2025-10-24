@@ -17,7 +17,7 @@ export const authOptions = {
   ],
   callbacks: {
     // Salva o accessToken do Google na sessão
-    async jwt({ token, account }) {
+    async jwt({ token, account }: { token: any, account: any }) {
       if (account) {
         token.accessToken = account.access_token;
       }
